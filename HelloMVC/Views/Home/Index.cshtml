@@ -11,3 +11,14 @@
 {
     <p>@car.Id - @car.Make - @car.Model</p>
 }
+
+@helper pluralizeChildren(int childCount)
+{
+        @(childCount == 1 ? "child" : "children");
+}
+
+
+@{
+    var childCount = 1;
+    <p>I have @childCount @pluralizeChildren(@childCount)</p>
+}
